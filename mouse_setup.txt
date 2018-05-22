@@ -1,0 +1,8 @@
+emerge xautomation xbindkeys xev xvkbd
+touch /.xbindkeysrc
+"/usr/bin/xte 'keydown Control_L' 'key c' 'keyup Control_L' &"
+b:8 + Release
+"/usr/bin/xte 'keydown Control_L' 'key v' 'keyup Control_L' &"
+b:9 + Release
+
+Проверять кнопки через xinput test
