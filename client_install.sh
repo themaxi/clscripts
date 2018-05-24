@@ -99,12 +99,16 @@ chpass_provider = ad
 override_homedir = /home/%u
 override_shell = /bin/bash
 access_provider = simple
+cache_credentials = true
+#cached_auth_timeout = 120
 
 [nss]
 debug_level = 1
 
 [pam]
-debug_level = 1" > /etc/sssd/sssd.conf
+debug_level = 1
+offline_credentials_expiration = 3
+pam_verbosity = 2" > /etc/sssd/sssd.conf
 
 chmod og-r /etc/sssd/sssd.conf 
 
