@@ -13,12 +13,10 @@ access_provider = simple
 cache_credentials = true
 #cached_auth_timeout = 120
 
-[pam]
-offline_credentials_expiration = 3
-pam_verbosity = 2
-
 [nss]
 debug_level = 1
 
 [pam]
 debug_level = 1
+offline_credentials_expiration = 3
+pam_verbosity = 2
