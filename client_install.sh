@@ -189,4 +189,11 @@ sss_override group-add linuxlocalusb -g 85
 
 echo "Запустим sssd"
 /etc/init.d/sssd restart
+
+echo "Уствановим фон"
+cp ./pgatu_back.jpg /usr/pgatu_back.jpg
+
+echo "Обновляем конфигу темы"
+echo "[General]
+background=/usr/pgatu_back.jpg" >> /usr/share/sddm/themes/maldives/theme.conf.user
 echo "Внимательно смотрим вывод, если ничего не сломалось, то все хорошо =)"
