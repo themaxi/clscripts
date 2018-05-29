@@ -186,6 +186,7 @@ sss_override group-add linuxlocalfloppy -g 11
 sss_override group-add linuxlocalcdrw -g 80
 sss_override group-add linuxlocalscanner -g 441
 sss_override group-add linuxlocalusb -g 85
+sss_override group-add linuxlocalsudo -g 443
 
 echo "Запустим sssd"
 /etc/init.d/sssd restart
