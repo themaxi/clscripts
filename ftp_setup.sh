@@ -21,5 +21,6 @@ mkdir /ftpfiles
 chown ftp /ftpfiles
 chmod oug+rwx /ftpfiles
 
-
+rc-update add vsftpd
+/etc/init.d/vsftpd restart
 
