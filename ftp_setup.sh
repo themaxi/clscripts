@@ -14,7 +14,10 @@ anon_mkdir_write_enable=NO
 dirmessage_enable=YES
 xferlog_enable=YES
 connect_from_port_20=YES
-listen=YES" > /etc/vsftpd/vsftpd.conf
+listen=YES
+local_umask=002
+chmod_enable=YES
+file_open_mode=0777" > /etc/vsftpd/vsftpd.conf
 
 echo "Создаем папку /ftpfiles"
 mkdir /ftpfiles
