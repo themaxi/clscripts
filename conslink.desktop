@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec=wine /mnt/cons/cons.exe /LINUX
+GenericName[ru_RU]=
+GenericName=
+Icon=alienarena
+MimeType=
+Name[ru_RU]=Consultant
+Name=Consultant
+Path=/mnt/cons
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=
