@@ -12,7 +12,7 @@ read -e -p "Пароль: " -i "" userpwd
 read -e -p "Версия samba: " -i "1.0" sambaverion
 
 mkdir $localmount
-
+echo -e "\n" >> /etc/fstab
 echo "$conssmb $localmount cifs username=$username,pass=$userpwd,dir_mode=0777,file_mode=0777,vers=$sambaverion" >> /etc/fstab
 
 mount -a
