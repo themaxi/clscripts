@@ -68,6 +68,9 @@ emerge =sssd-1.16.0
 echo "Установим Яндекс.Браузер"
 emerge yandex-browser-beta
 
+echo "Установим Google Chrome"
+emerge google-chrome
+
 echo "Установим x11vnc"
 emerge x11vnc
 
