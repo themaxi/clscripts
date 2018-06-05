@@ -60,7 +60,7 @@ echo "Установим bind-tools"
 emerge bind-tools
 
 echo "Установим samba"
-emerge =samba-4.8.1
+emerge =samba-4.8.2
 
 echo "Установим sssd"
 emerge =sssd-1.16.0
