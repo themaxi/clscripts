@@ -1,0 +1,19 @@
+[Desktop Entry]
+Comment[ru_RU]=
+Comment=
+Exec=wine /mnt/garant/garant.exe
+GenericName[ru_RU]=
+GenericName=
+Icon=preferences-web-browser-stylesheets
+MimeType=
+Name[ru_RU]=Garant
+Name=Garant
+Path=/mnt/garant
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-DBUS-ServiceName=
+X-DBUS-StartupType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

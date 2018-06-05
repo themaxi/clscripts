@@ -6,4 +6,4 @@ fi
 
 echo "НЕ ЗАБЫВАЕм НАСТРОИТЬ СЕТЕВОЙ ДИСК в winecfg!"
 
-cp ./conslink.desktop ~/Desktop/conslink.desktop
+cp ./garantlink.desktop ~/Desktop/garantlink.desktop
