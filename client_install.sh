@@ -12,6 +12,25 @@ echo "Добавим бинарные хосты"
 read -e -p "Имена бинарных хостов[нажимаем Enter]: " -i "http://kdebinhost.pgatu.lan/packages http://xfcebinhost.pgatu.lan/packages http://dsslave.pgatu.lan/packages" binaryhost
 echo "PORTAGE_BINHOST=\"$binaryhost\"" >> /etc/portage/make.conf/custom
 
+echo "Обновляем uses"
+echo ">=media-gfx/graphicsmagick-1.3.25 -imagemagick
+>=net-fs/samba-4.8.1 acl addc addns ads client cluster cups fam gnutls ldap pam python syslog winbind -dmapi -gpg -iprint -quota (-selinux) (-system-heimdal) -system-mitkrb5 {-test} -zeroconf
+>=sys-auth/sssd-1.16.0 samba
+>=net-dns/bind-tools-9.11.2_p1 gssapi
+>=net-nds/openldap-2.4.44 sasl abi_x86_32
+>=dev-libs/cyrus-sasl-2.1.26-r9 kerberos
+>=dev-libs/openssl-1.0.2o abi_x86_32" >> /etc/portage/package.use/custom
+
+echo "Обновляем keywords"
+echo "=sys-libs/tevent-0.9.36 ~amd64
+=dev-util/cmocka-1.1.1 ~amd64
+>=sys-libs/talloc-2.1.13 ~amd64
+>=net-fs/samba-4.8.1 ~amd64
+>=sys-libs/tdb-1.3.15 ~amd64
+>=sys-libs/ldb-1.3.2 ~amd64
+>=sys-auth/sssd-1.16.0 ~amd64
+>=www-client/yandex-browser-beta-18.3.1.1122_p1 ~amd64" >> /etc/portage/package.keywords/custom
+
 echo "Запускаем обновление"
 cl-update
 
@@ -36,25 +55,6 @@ echo "127.0.0.1       $vhostname.pgatu.lan $vhostname localhost" > /etc/hosts
 
 echo "Перезапустим хостнейм"
 hostname "$vhostname"
-
-echo "Обновляем uses"
-echo ">=media-gfx/graphicsmagick-1.3.25 -imagemagick
->=net-fs/samba-4.8.1 acl addc addns ads client cluster cups fam gnutls ldap pam python syslog winbind -dmapi -gpg -iprint -quota (-selinux) (-system-heimdal) -system-mitkrb5 {-test} -zeroconf
->=sys-auth/sssd-1.16.0 samba
->=net-dns/bind-tools-9.11.2_p1 gssapi
->=net-nds/openldap-2.4.44 sasl abi_x86_32
->=dev-libs/cyrus-sasl-2.1.26-r9 kerberos
->=dev-libs/openssl-1.0.2o abi_x86_32" >> /etc/portage/package.use/custom
-
-echo "Обновляем keywords"
-echo "=sys-libs/tevent-0.9.36 ~amd64
-=dev-util/cmocka-1.1.1 ~amd64
->=sys-libs/talloc-2.1.13 ~amd64
->=net-fs/samba-4.8.1 ~amd64
->=sys-libs/tdb-1.3.15 ~amd64
->=sys-libs/ldb-1.3.2 ~amd64
->=sys-auth/sssd-1.16.0 ~amd64
->=www-client/yandex-browser-beta-18.3.1.1122_p1 ~amd64" >> /etc/portage/package.keywords/custom
 
 echo "Установим bind-tools"
 emerge bind-tools
