@@ -49,11 +49,11 @@ echo ">=media-gfx/graphicsmagick-1.3.25 -imagemagick
 echo "Обновляем keywords"
 echo "=sys-libs/tevent-0.9.36 ~amd64
 =dev-util/cmocka-1.1.1 ~amd64
-=sys-libs/talloc-2.1.13 ~amd64
-=net-fs/samba-4.8.1 ~amd64
-=sys-libs/tdb-1.3.15 ~amd64
-=sys-libs/ldb-1.3.2 ~amd64
-=sys-auth/sssd-1.16.0 ~amd64
+>=sys-libs/talloc-2.1.13 ~amd64
+>=net-fs/samba-4.8.1 ~amd64
+>=sys-libs/tdb-1.3.15 ~amd64
+>=sys-libs/ldb-1.3.2 ~amd64
+>=sys-auth/sssd-1.16.0 ~amd64
 >=www-client/yandex-browser-beta-18.3.1.1122_p1 ~amd64" >> /etc/portage/package.keywords/custom
 
 echo "Установим bind-tools"
