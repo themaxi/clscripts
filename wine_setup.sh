@@ -7,9 +7,3 @@ fi
 echo "Установим wine и winetricks"
 emerge wine winetricks
 
-echo "Установим архитектуру"
-echo "export WINEARCH=win32" > ~/.bashrc
-
-echo "Инициализируем wine"
-WINEARCH=win32 wineboot
-
