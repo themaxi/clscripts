@@ -10,6 +10,7 @@ echo "export WINEARCH=win32" > ~/.bashrc
 echo "Инициализируем wine"
 WINEARCH=win32 wineboot
 
+echo "Настроим шрифты"
 winetricks allfonts
 winetricks fontsmooth-rgb
 winetricks settings fontsmooth=rgb
