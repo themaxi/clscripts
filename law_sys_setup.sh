@@ -1,5 +1,5 @@
 #/bin/sh
-if [ "$EUID" -e 0 ]
+if [ "$EUID" -eq 0 ]
   then echo "ОШИБКА: запускать от обычного пользователя!"
   exit
 fi
