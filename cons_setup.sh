@@ -5,7 +5,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 echo "Установка КонсультантПлюс"
-read -e -p "Путь к общей папке с К+: " -i "//sdc02/Consultant" conssmb
+read -e -p "Путь к общей папке с К+: " -i "//sdc02.psaa.local/Consultant" conssmb
 read -e -p "Путь к папке монтирования: " -i "/mnt/cons" localmount
 read -e -p "Имя пользователя: " -i "melehin-mi" username
 read -e -p "Пароль: " -i "" userpwd
